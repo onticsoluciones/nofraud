@@ -29,14 +29,18 @@ NoFraud is a federated multi-node electronic transactions validator. Uses Machin
 
 #Features
 
+- [x] Command Line
 - [x] Magento Module
 - [x] Configurable Plugin via Admin Panel
 - [x] Multinode Connections
 
 
-
-#To-Do
-
 #Credits
+
+* [Alfonso Moratalla](https://github.com/alfonsomoratalla) -> [Twitter](https://twitter.com/alfonso_ng)
+* [Alejandro Sánchez](https://github.com/alsanchez) -> [Twitter](https://twitter.com/alsanchez_)
+* [Ricardo Monsalve](https://github.com/ricarmon) -> [Twitter](https://twitter.com/ricarmonsalve)
+* [Germán Sánchez](https://github.com/yercito) -> [Twitter](https://twitter.com/yeroncio)
+
 
 
