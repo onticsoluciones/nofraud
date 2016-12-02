@@ -1,6 +1,6 @@
 <?php
 
-namespace Ontic\NoFraud\Plugins;
+namespace Ontic\NoFraud\Interfaces;
 
 abstract class BasePlugin implements IPlugin
 {

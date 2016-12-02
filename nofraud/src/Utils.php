@@ -2,7 +2,7 @@
 
 namespace Ontic\NoFraud;
 
-use Ontic\NoFraud\Plugins\IPlugin;
+use Ontic\NoFraud\Interfaces\IPlugin;
 
 class Utils
 {

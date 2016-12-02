@@ -2,6 +2,7 @@
 
 namespace Ontic\NoFraud\Plugins;
 
+use Ontic\NoFraud\Interfaces\BasePlugin;
 use Ontic\NoFraud\Model\Assessment;
 
 /**
