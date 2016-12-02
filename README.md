@@ -9,7 +9,6 @@ Electronic Transactions Validator.
 * [Features](https://github.com/onticsoluciones/nofraud#features)
 * [Installation](https://github.com/onticsoluciones/nofraud/blob/master/doc/installation.md)
 * [License](https://github.com/onticsoluciones/nofraud/blob/master/LICENSE)
-* [TO-DO](https://github.com/onticsoluciones/nofraud#to-do)
 * [Credits](https://github.com/onticsoluciones/nofraud#credits)
 
 
