@@ -15,7 +15,7 @@ class CapabilitiesController extends BaseController
     {
         $capabilities = [];
 
-        foreach(Utils::getInstalledPlugins() as $plugin)
+        foreach(Utils\PluginUtils::loadPlugins() as $plugin)
         {
             foreach($plugin->getProvidedFields() as $field)
             {
@@ -25,6 +25,7 @@ class CapabilitiesController extends BaseController
                 }
             }
         }
+
         return new JsonResponse($capabilities);
     }
 }

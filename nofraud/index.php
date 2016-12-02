@@ -12,6 +12,11 @@ use Symfony\Component\Routing\RouteCollection;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+define('PROJECT_ROOT', __DIR__);
+
+\Ontic\NoFraud\Utils\PluginUtils::loadPlugins();
+
+
 $request = Request::createFromGlobals();
 $routes = createRoutes();
 $controller = getController($request, $routes);

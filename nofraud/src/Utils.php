@@ -7,9 +7,10 @@ use Ontic\NoFraud\Plugins\IPlugin;
 class Utils
 {
     /**
+     * @deprecated
      * @return IPlugin[]
      */
-    public static function getInstalledPlugins()
+    public static function getAvailablePlugins()
     {
         $pluginsDirectory = __DIR__ . '/Plugins';
 
@@ -44,6 +45,23 @@ class Utils
         }
 
         return $plugins;
+    }
+
+    /**
+     * @param string $code
+     * @return null|IPlugin
+     */
+    public static function getPluginByCode($code)
+    {
+        foreach(static::getAvailablePlugins() as $plugin)
+        {
+            if($plugin->getCode() === $code)
+            {
+                return $plugin;
+            }
+        }
+
+        return null;
     }
 
     /**

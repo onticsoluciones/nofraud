@@ -9,7 +9,7 @@ use Ontic\NoFraud\Model\Assessment;
  * from a set of known bad IP addresses
  * @package Ontic\NoFraud\Plugins
  */
-class SampleIpBlacklistPlugin implements IPlugin
+class SampleIpBlacklistPlugin extends BasePlugin
 {
     // Since this is just an sample plugin, the "bad" IPs
     // are just hardcoded into the file. In a real system we
@@ -21,6 +21,14 @@ class SampleIpBlacklistPlugin implements IPlugin
         '192.168.4.45',
         '192.168.5.232',
     ];
+
+    /**
+     * @return string
+     */
+    function getCode()
+    {
+        return 'sample_ip_blacklist';
+    }
 
     /**
      * @return string[]
@@ -68,5 +76,13 @@ class SampleIpBlacklistPlugin implements IPlugin
         // This plugin doesn't modify the source data,
         // so we just return it as it is
         return $data;
+    }
+
+    /**
+     * @param string[] $configuration
+     */
+    function configure($configuration)
+    {
+        // This plugin doesn't take any configuration options
     }
 }

@@ -22,7 +22,7 @@ class AssessmentController extends BaseController
 
         $scores = [];
 
-        $plugins = Utils::getInstalledPlugins();
+        $plugins = Utils::getAvailablePlugins();
 
         // Give all the plugins a chance to append new data
         // to the payload

@@ -7,6 +7,16 @@ use Ontic\NoFraud\Model\Assessment;
 interface IPlugin
 {
     /**
+     * @return string
+     */
+    function getCode();
+
+    /**
+     * @param string[] $configuration
+     */
+    function configure($configuration);
+
+    /**
      * @return string[]
      */
     function getProvidedFields();
