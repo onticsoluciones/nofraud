@@ -1,5 +1,28 @@
 # NoFraud
 
+Electronic Transactions Validator. 
+
+# Description
+
+NoFraud is a federated multi-node electronic transactions validator. Uses Machine Learning to check transactions and give back if transaction is fraudulent or legitim. End users can configurate to which nodes can connect and params to check depending to your needs.
+
+
+# Technology used
+
+- [x] Machine Learning
+- [x] Python
+- [x] PHP (Core)
+- [x] Docker - Kubernetes
+- [x] Polymer
+- [x] Tensor Flow
+- [x] API-Rest
+
+# Features
+
+- [x] Magento Module
+- [x] Configurable Plugin via Admin Panel
+- [x] Multinode Connections
+
 # Installation instructions
 
 Required dependencies
@@ -38,3 +61,9 @@ The exposed resources should be accessible at:
 http://localhost:9000/capabilities [GET]
 
 http://localhost:9000/assesment [POST]
+
+# Todo
+
+# Credits
+
+
