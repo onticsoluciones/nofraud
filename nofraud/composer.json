@@ -1,0 +1,9 @@
+{
+  "autoload": {
+    "psr-4": {"Ontic\\NoFraud\\": "src/"}
+  },
+  "require": {
+    "symfony/routing": "^3.2",
+    "symfony/http-foundation": "^3.2"
+  }
+}
