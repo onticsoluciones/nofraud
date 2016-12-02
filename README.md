@@ -4,7 +4,15 @@
 
 Required dependencies
 
-php5 interpreter, curl, php5 extension for curl
+- [x] php5 interpreter or above
+- [x] curl
+- [x] php extension for curl
+
+Clone the repository
+
+```bash
+git clone https://github.com/onticsoluciones/nofraud.git
+```
 
 After cloning the repository, download composer from the official website
 
