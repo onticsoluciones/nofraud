@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+    nofraud:
+      build:
+          context: .
+          dockerfile: Dockerfile-nofraud
+      ports:
+        - "5005:80"
