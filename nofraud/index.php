@@ -1,6 +1,6 @@
 <?php
 
-use Ontic\NoFraud\Controllers\IController;
+use Ontic\NoFraud\Controllers\BaseController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Exception\MethodNotAllowedException;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
@@ -17,7 +17,7 @@ $route = new Route('/capabilities', ['controller' => 'Ontic\\NoFraud\\Controller
 $route->setMethods(['GET']);
 $routes->add('get_capabilities', $route);
 
-$route = new Route('/assessment', ['controller' => 'Ontic\\NoFraud\\Controllers\\AssesmentController']);
+$route = new Route('/assessment', ['controller' => 'Ontic\\NoFraud\\Controllers\\AssessmentController']);
 $route->setMethods(['POST']);
 $routes->add('create_assessment', $route);
 
@@ -31,8 +31,8 @@ try
 {
     $parameters = $matcher->match($request->getPathInfo());
     $controllerClass = $parameters['controller'];
-    /** @var IController $controller */
-    $controller = new $controllerClass();
+    /** @var BaseController $controller */
+    $controller = new $controllerClass($request);
     $response = $controller->defaultAction();
     $response->send();
     die;
