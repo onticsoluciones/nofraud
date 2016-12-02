@@ -4,12 +4,12 @@ Electronic Transactions Validator.
 
 # Table of Contents
 
-* [Description] 
-* [Technology]
-* [Features]
-* [Installation]
-* [TO-DO]
-* [Credits]
+* [Description](# Description)
+* [Technology](# Technology used)
+* [Features](# Features)
+* [Installation](https://github.com/onticsoluciones/nofraud/blob/master/doc/installation.md)
+* [TO-DO](# To-Do)
+* [Credits](# Credits)
 
 
 # Description
@@ -38,14 +38,4 @@ NoFraud is a federated multi-node electronic transactions validator. Uses Machin
 
 # Credits
 
-
-
-[//]: # 
-   
-   [description]: <>
-   [technology]: <>
-   [features]: <>
-   [installation]: <>
-   [to-do]: <>
-   [credits]: <>
 
