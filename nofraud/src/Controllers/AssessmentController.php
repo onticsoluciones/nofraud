@@ -24,19 +24,32 @@ class AssessmentController extends BaseController
 
         $plugins = Utils::getInstalledPlugins();
 
+        // Give all the plugins a chance to append new data
+        // to the payload
         foreach($plugins as $plugin)
         {
             $data = $plugin->augment($data);
-            $assessment = $plugin->assess($data);
-            if($assessment !== null)
-            {
-                if($assessment->isAuthoritative())
-                {
-                    return static::createResponse($assessment->getScore());
-                }
+        }
 
-                $scores[] = $assessment->getScore();
+        // Retrieve the assessments
+        foreach($plugins as $plugin)
+        {
+            $assessment = $plugin->assess($data);
+
+            if($assessment === null)
+            {
+                // The plugin couldn't make an assessment, skip it
+                continue;
             }
+
+            if($assessment->isAuthoritative())
+            {
+                // The plugin has made an authorizative assessment,
+                // so just return its score
+                return static::createResponse($assessment->getScore());
+            }
+
+            $scores[] = $assessment->getScore();
         }
 
         if(count($scores) > 0)

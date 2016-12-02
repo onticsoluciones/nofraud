@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+    <name>Beecoder_Beeshopy</name>
+    <version>3.1.5</version>
+    <stability>stable</stability>
+    <license>OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Insert your shop in Facebook!&#xD;
+Beeshopy extension for Magento, it allows you to integrates your magento store with beeshopy.</summary>
+    <description>Custom Module that allows you to connect with beeshopy service and integrates your magento store with Facebook. &#xD;
+&#xD;
+It contains a custom API and cart processing.</description>
+    <notes>Enabling WYSIWYG description tags support.</notes>
+    <authors><author><name>Miguel &#xC1;ngel Mart&#xED;nez Trivi&#xF1;o</name><user>migmartri</user><email>migmartri@gmail.com</email></author></authors>
+    <date>2014-03-31</date>
+    <time>17:46:27</time>
+    <contents><target name="magecommunity"><dir><dir name="Beecoder"><dir name="Beeshopy"><dir name="Block"><file name="BeetailerCode.php" hash="5ebd139c74329ed65008af77e8d98eb0"/><file name="Track.php" hash="a40d400b02f73d5b4dea35c348ffee00"/></dir><dir name="Helper"><file name="Data.php" hash="ead88c0b629856526d39e7fb6f3a4ca5"/></dir><dir name="Model"><file name="Api.php" hash="51c01294f61d45d81bf666fd90a8ce1e"/></dir><file name="changelog.txt" hash="3431a84d19e9f3eea27b21f19e17d471"/><dir name="controllers"><file name="AdminController.php" hash="ec76e2b55bb772b244d9fc2e06a2223e"/><file name="IndexController.php" hash="0c177b543cf62d6bcd5617c6713032d3"/></dir><dir name="etc"><file name="api.xml" hash="507ae656ea724a77def33efd8429d674"/><file name="config.xml" hash="0f266cb1c551fdbb499a004bed040eed"/></dir><file name="install.txt" hash="48681401ca44b68a89c111c37bbd76e0"/><file name=".changelog.txt.swp" hash="d3c007df4226cb4c2198c4c2e1528870"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Beecoder_Beeshopy.xml" hash="55666ef45f08dab44b138e49532ca3b8"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="beeshopy.xml" hash="39dceda3708b265ef734334905c566f3"/></dir><dir name="template"><dir name="beeshopy"><file name="track.phtml" hash="47c95001bb55042c5ae7d8ee4b03cccf"/><file name="beetailercode.phtml" hash="ae2644a2449ff3b0d9929da9cba85a59"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

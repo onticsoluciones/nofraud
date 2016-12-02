@@ -17,24 +17,41 @@ class Utils
 
         foreach(scandir($pluginsDirectory) as $entry)
         {
-            if(in_array($entry, ['.', '..']))
+            $entryPath = $pluginsDirectory . '/' . $entry;
+            if(is_dir($entryPath))
             {
+                // Skip directory entries
                 continue;
             }
 
-            $pluginPath = $pluginsDirectory . '/' . $entry;
-            $className = pathinfo($pluginPath)['filename'];
+            $className = pathinfo($entryPath)['filename'];
             $fullyQualifiedClassName = 'Ontic\NoFraud\Plugins\\' . $className;
-            if(class_exists($fullyQualifiedClassName))
+            if(!class_exists($fullyQualifiedClassName))
             {
-                $object = new $fullyQualifiedClassName();
-                if ($object instanceof IPlugin)
-                {
-                    $plugins[] = $object;
-                }
+                // The class doesn't exist, bail out
+                continue;
             }
+
+            $object = new $fullyQualifiedClassName();
+            if (!$object instanceof IPlugin)
+            {
+                // The class exists but it doesn't implement
+                // IPlugin, so skip it
+                continue;
+            }
+
+            $plugins[] = $object;
         }
 
         return $plugins;
+    }
+
+    /**
+     * @return \PDO
+     */
+    public static function openConnection()
+    {
+        $databasePath = __DIR__ . '/../data/database.sqlite';
+        return new \PDO('sqlite:' . $databasePath);
     }
 }

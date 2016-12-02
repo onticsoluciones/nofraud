@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Beecoder_Beeshopy>
+      <active>true</active>
+      <codePool>community</codePool>
+    </Beecoder_Beeshopy>
+  </modules>
+</config>
+

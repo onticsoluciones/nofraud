@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <modules>
+    <Beecoder_Beeshopy>
+      <version>3.1.0</version>
+    </Beecoder_Beeshopy>
+  </modules>
+
+  <global>
+    <blocks>
+      <beecoder_beeshopy>
+        <class>Beecoder_Beeshopy_Block</class>
+      </beecoder_beeshopy>
+    </blocks>
+
+    <models>
+      <Beecoder_Beeshopy>
+        <class>Beecoder_Beeshopy_Model</class>
+      </Beecoder_Beeshopy>
+    </models>
+
+    <helpers>
+      <Beeshopy>
+        <class>Beecoder_Beeshopy_Helper</class>
+      </Beeshopy>  
+    </helpers>
+  </global>
+
+  <frontend>
+    <routers>
+      <process-facebook-cart>
+        <use>standard</use>
+        <args>
+          <module>Beecoder_Beeshopy</module>
+          <frontName>process-facebook-cart</frontName>
+        </args>
+      </process-facebook-cart>
+    </routers>
+
+    <layout>
+      <updates>
+        <beeshopy>
+          <file>beeshopy.xml</file>
+        </beeshopy>
+      </updates>
+    </layout>
+  </frontend>  
+
+  <admin>
+    <routers>
+      <beetailer-installation>
+          <use>admin</use>
+          <args>
+            <module>Beecoder_Beeshopy</module>
+            <frontName>beetailer-installation</frontName>
+          </args>
+      </beetailer-installation>
+    </routers>
+  </admin>
+
+  <adminhtml>
+    <menu>
+      <facebook-store translate="title" module="Beeshopy">
+        <title>Facebook Store</title>
+        <action>beetailer-installation/admin/index</action>
+        <sort_order>100</sort_order>
+      </facebook-store>
+    </menu>
+
+    <acl>
+      <resources>
+        <admin>
+          <children>
+            <facebook-store translate="title" module="Beeshopy">
+              <title>Facebook Store</title>
+              <sort_order>100</sort_order>
+            </facebook-store>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+  </adminhtml>    
+</config>
+

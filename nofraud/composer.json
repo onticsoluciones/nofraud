@@ -4,6 +4,8 @@
   },
   "require": {
     "symfony/routing": "^3.2",
-    "symfony/http-foundation": "^3.2"
+    "symfony/http-foundation": "^3.2",
+    "robmorgan/phinx": "^0.6.5",
+    "symfony/console": "^3.2"
   }
 }
