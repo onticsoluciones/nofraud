@@ -2,6 +2,8 @@
 
 use Ontic\NoFraud\Controllers\IController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Exception\MethodNotAllowedException;
+use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Route;
@@ -25,11 +27,25 @@ $context = new RequestContext();
 $context->fromRequest($request);
 $matcher = new UrlMatcher($routes, $context);
 
-$parameters = $matcher->match($request->getPathInfo());
-$controllerClass = $parameters['controller'];
-/** @var IController $controller */
-$controller = new $controllerClass();
-$response = $controller->defaultAction();
-$response->send();
-die;
-
+try
+{
+    $parameters = $matcher->match($request->getPathInfo());
+    $controllerClass = $parameters['controller'];
+    /** @var IController $controller */
+    $controller = new $controllerClass();
+    $response = $controller->defaultAction();
+    $response->send();
+    die;
+}
+catch (MethodNotAllowedException $ex)
+{
+    header('', true, 405);
+    echo '405 Method Not Allowed';
+    die;
+}
+catch (ResourceNotFoundException $ex)
+{
+    header('', true, 404);
+    echo '404 Resource Not Found';
+    die;
+}
