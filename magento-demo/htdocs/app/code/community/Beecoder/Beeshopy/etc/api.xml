@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+  <api>
+    <resources>
+      <beeshopyCustomApi translate="title" module="Beecoder_Beeshopy">
+        <title>Beeshopy custom API</title>
+        <model>Beecoder_Beeshopy/Api</model>
+        <methods>
+          <!-- Retrieve product information -->
+          <productInfo translate="title" module="beecoder_beeshopy">
+            <title>Retrieve product information</title>
+            <acl>catalog/product</acl>
+          </productInfo>
+          <!-- Rewrite original category.tree, num products added -->
+          <categoryTree translate="title" module="beecoder_beeshopy">
+            <title>Rewrite original category.tree, num products added</title>
+            <acl>catalog/product</acl>
+          </categoryTree>
+          <!-- Rewrite original category.assignedProducts, product_name added -->
+          <assignedProducts translate="title" module="beecoder_beeshopy">
+            <title>Rewrite original category.assignedProducts, product_name added</title>
+            <acl>catalog/product</acl>
+          </assignedProducts>
+          <!--  System information, store views, taxes included, currencies -->
+          <systemInfo translate="title" module="beecoder_beeshopy">
+            <title>Retrieve usefull system information</title>
+            <acl>catalog/product</acl>
+          </systemInfo>
+          <!--  Check if module is instaled and check correct access permissions-->
+          <checkModule translate="title" module="beecoder_beeshopy">
+            <title>Check if module installed and return version</title>
+            <acl>catalog/product</acl>
+          </checkModule>
+        </methods>
+      </beeshopyCustomApi>
+    </resources>
+    <acl>
+      <resources>
+        <all>
+        </all>
+      </resources>
+    </acl>
+  </api>
+</config>

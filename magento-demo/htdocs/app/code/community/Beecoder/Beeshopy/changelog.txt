@@ -1,0 +1,79 @@
+== Module changelog ==
+
+===  3.1.5 (03-31-14) ===
+
+* WYSIWYG media path supports
+
+===  3.1.0 (03-17-14) ===
+
+* Importing images with watermark
+
+===  3.0.1 (10-04-13) ===
+
+* Packaging for enterprise version
+
+===  3.0.0 (04-15-13) ===
+
+* Adding storeView hidden variable improving the promotions feature
+
+===  2.9.0 (11-06-12) ===
+
+* Fixed productUrl method lock in Magento 1.4.1.1
+
+===  2.8.5 (10-30-12) ===
+
+* Adding support to discount code applications on shopping cart
+
+===  2.8.2 (10-09-12) ===
+
+* Adding support to backorders
+
+===  2.8.1 (08-28-12) ===
+
+* Increasing the IFrame size
+
+===  2.8.0 (08-16-12) ===
+
+* Enabling cart discount rules on prices
+
+===  2.7.7 (07-05-12) ===
+
+* Fixing log entry undefined index
+
+===  2.7.6 (06-05-12) ===
+
+* Adding manage stock flag 
+
+===  2.7.5 (05-30-12) ===
+
+* Adding updated_at to products in order to improve update times
+
+===  2.7.2 (05-14-12) ===
+
+* Fixing option value label translation
+
+===  2.7.1 (05-09-12) ===
+
+* Fixing option values sort order
+
+===  2.7.0 (05-09-12) ===
+
+* New configurable products system 
+
+===  2.6.0 (03-21-12) ===
+
+* Added language/store view support for configurable attributes
+
+===  2.5.2 (12-14-11) ===
+
+* Uploading a new version because of Magento Connect error
+
+===  2.5.1 (12-02-11) ===
+
+* Fixing javascript reference
+
+===  2.5.0 (11-15-11) ===
+
+* Adding base URL
+
+...
