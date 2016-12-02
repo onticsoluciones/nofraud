@@ -4,12 +4,12 @@ Electronic Transactions Validator.
 
 #Table of Contents
 
-* [Description](# Description)
-* [Technology](# Technology used)
-* [Features](# Features)
+* [Description](https://github.com/onticsoluciones/nofraud#description)
+* [Technology](https://github.com/onticsoluciones/nofraud#technology-used)
+* [Features](https://github.com/onticsoluciones/nofraud#features)
 * [Installation](https://github.com/onticsoluciones/nofraud/blob/master/doc/installation.md)
-* [TO-DO](# To-Do)
-* [Credits](# Credits)
+* [TO-DO](https://github.com/onticsoluciones/nofraud#to-do)
+* [Credits](https://github.com/onticsoluciones/nofraud#credits)
 
 
 #Description
