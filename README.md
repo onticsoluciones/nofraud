@@ -9,7 +9,6 @@ Electronic Transactions Validator.
 * [Features](https://github.com/onticsoluciones/nofraud#features)
 * [Installation](https://github.com/onticsoluciones/nofraud/blob/master/doc/installation.md)
 * [License](https://github.com/onticsoluciones/nofraud/blob/master/LICENSE)
-* [TO-DO](https://github.com/onticsoluciones/nofraud#to-do)
 * [Credits](https://github.com/onticsoluciones/nofraud#credits)
 
 
@@ -29,14 +28,18 @@ NoFraud is a federated multi-node electronic transactions validator. Uses Machin
 
 #Features
 
+- [x] Command Line
 - [x] Magento Module
 - [x] Configurable Plugin via Admin Panel
 - [x] Multinode Connections
 
 
-
-#To-Do
-
 #Credits
+
+* [Alfonso Moratalla](https://github.com/alfonsomoratalla) -> [Twitter](https://twitter.com/alfonso_ng)
+* [Alejandro Sánchez](https://github.com/alsanchez) -> [Twitter](https://twitter.com/alsanchez_)
+* [Ricardo Monsalve](https://github.com/ricarmon) -> [Twitter](https://twitter.com/ricarmonsalve)
+* [Germán Sánchez](https://github.com/yercito) -> [Twitter](https://twitter.com/yeroncio)
+
 
 
