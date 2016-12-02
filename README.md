@@ -27,5 +27,6 @@ php -S localhost:9000 -t .
 
 The exposed resources should be accessible at:
 
-GET http://localhost:9000/capabilities
-POST http://localhost:9000/assesment
+http://localhost:9000/capabilities [GET]
+
+http://localhost:9000/assesment [POST]
