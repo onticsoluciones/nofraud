@@ -1,9 +1,31 @@
 version: '2'
 
 services:
-    nofraud:
-      build:
+   db:
+     image: mysql:5.7
+     environment:
+       MYSQL_ROOT_PASSWORD: magento
+       MYSQL_DATABASE: bitnami_magento
+       MYSQL_USER: bn_magento
+       MYSQL_PASSWORD: 248582739b
+
+   magento:
+     links:
+       - nofraud
+     depends_on:
+       - db
+     build:
+          context: .
+          dockerfile: Dockerfile-magento
+     ports:
+       - "8000:80"
+     environment:
+       MAGENTO_DB_HOST: db:3306
+       MAGENTO_DB_PASSWORD: 248582739b
+
+   nofraud:
+    build:
           context: .
           dockerfile: Dockerfile-nofraud
-      ports:
-        - "5005:80"
+    ports:
+        - "9000:9000"
