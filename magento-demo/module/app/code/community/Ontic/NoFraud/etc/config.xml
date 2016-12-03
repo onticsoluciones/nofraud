@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+
+    <modules>
+        <Ontic_NoFraud>
+            <version>1.0.0.0</version>
+        </Ontic_NoFraud>
+    </modules>
+
+    <global>
+
+        <models>
+            <ontic_nofraud>
+                <class>Ontic_NoFraud_Model</class>
+            </ontic_nofraud>
+        </models>
+
+        <helpers>
+            <ontic_nofraud>
+                <class>Ontic_NoFraud_Helper</class>
+            </ontic_nofraud>
+        </helpers>
+
+	<events>
+
+	    <sales_order_place_after>
+
+		<observers>
+            	    <ontic_nofraud_save_observer>
+                        <type>singleton</type>
+                        <class>Ontic_NoFraud_Model_Sales_Order_Observer</class>
+                        <method>sales_order_place_after</method>
+                    </ontic_nofraud_save_observer>
+                </observers>
+
+            </sales_order_place_after>
+
+        </events>
+
+    </global>
+
+    <adminhtml>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <ontic>
+                                        <title>Ontic - All</title>
+                                    </ontic>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</adminhtml>
+
+</config>
