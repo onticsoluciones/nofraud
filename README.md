@@ -25,6 +25,7 @@ NoFraud is a federated multi-node electronic transactions validator. Uses Machin
 - [x] Polymer
 - [x] Tensor Flow
 - [x] API-Rest
+- [x] Dashboard.io
 
 #Features
 
@@ -32,6 +33,7 @@ NoFraud is a federated multi-node electronic transactions validator. Uses Machin
 - [x] Magento Module
 - [x] Configurable Plugin via Admin Panel
 - [x] Multinode Connections
+- [x] Monitoring Dashboard
 
 
 #Credits
