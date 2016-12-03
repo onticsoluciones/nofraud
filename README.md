@@ -7,7 +7,8 @@ Electronic Transactions Validator.
 * [Description](https://github.com/onticsoluciones/nofraud#description)
 * [Technology](https://github.com/onticsoluciones/nofraud#technology-used)
 * [Features](https://github.com/onticsoluciones/nofraud#features)
-* [Installation](https://github.com/onticsoluciones/nofraud/blob/master/doc/installation.md)
+* [Automatic instalation](https://github.com/onticsoluciones/nofraud/blob/master/doc/docker.md)
+* [Manual Installation](https://github.com/onticsoluciones/nofraud/blob/master/doc/installation.md)
 * [Dashboard](https://github.com/onticsoluciones/nofraud/blob/master/doc/dashboard.md)
 * [License](https://github.com/onticsoluciones/nofraud/blob/master/LICENSE)
 * [Credits](https://github.com/onticsoluciones/nofraud#credits)
@@ -22,11 +23,10 @@ NoFraud is a federated multi-node electronic transactions validator. Uses Machin
 - [x] Machine Learning
 - [x] Python
 - [x] PHP (Core)
-- [x] Docker - Kubernetes
-- [x] Polymer
+- [x] Docker
 - [x] Tensor Flow
 - [x] API-Rest
-- [x] Dashboard.io
+- [x] Dashing.io
 
 #Features
 
@@ -38,6 +38,16 @@ NoFraud is a federated multi-node electronic transactions validator. Uses Machin
 
 
 #Credits
+
+Magento Community Edition -> https://magento.com/products/community-edition
+Docker -> https://www.docker.com/
+Ternsor Flow -> https://www.tensorflow.org/
+Symphony -> http://symfony.es/
+Dashing.io -> https://github.com/Shopify/dashing
+Python -> https://www.python.org/
+PHP -> https://php.net/images/logo.php
+
+#Contributors
 
 * [Alfonso Moratalla](https://github.com/alfonsomoratalla) -> [Twitter](https://twitter.com/alfonso_ng)
 * [Alejandro Sánchez](https://github.com/alsanchez) -> [Twitter](https://twitter.com/alsanchez_)

@@ -36,3 +36,5 @@ The exposed resources should be accessible at:
 http://localhost:9000/capabilities [GET]
 
 http://localhost:9000/assesment [POST]
+
+
