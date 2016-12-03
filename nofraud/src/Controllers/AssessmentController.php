@@ -20,6 +20,7 @@ class AssessmentController extends BaseController
         {
             return new Response('400 Bad Request', 400);
         }
+        file_put_contents('/tmp/request.json', json_encode($data));
 
         $cumulativeScore = 0;
         $cumulativeWeight = 0;
@@ -55,7 +56,7 @@ class AssessmentController extends BaseController
             $cumulativeWeight += $plugin->getWeight();
         }
 
-        $score = round($cumulativeScore / $cumulativeWeight);
+        $score = round($cumulativeScore / $cumulativeWeight, 2);
 
         return static::createResponse($score);
     }
