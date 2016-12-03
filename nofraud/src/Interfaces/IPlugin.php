@@ -32,4 +32,9 @@ interface IPlugin
      * @return mixed
      */
     function augment($data);
+
+    /**
+     * @return float
+     */
+    function getWeight();
 }

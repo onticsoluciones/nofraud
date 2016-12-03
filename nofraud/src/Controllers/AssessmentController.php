@@ -3,6 +3,7 @@
 namespace Ontic\NoFraud\Controllers;
 
 use Ontic\NoFraud\Utils;
+use Ontic\NoFraud\Utils\PluginUtils;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,9 +21,10 @@ class AssessmentController extends BaseController
             return new Response('400 Bad Request', 400);
         }
 
-        $scores = [];
+        $cumulativeScore = 0;
+        $cumulativeWeight = 0;
 
-        $plugins = Utils::getAvailablePlugins();
+        $plugins = PluginUtils::loadPlugins();
 
         // Give all the plugins a chance to append new data
         // to the payload
@@ -49,17 +51,11 @@ class AssessmentController extends BaseController
                 return static::createResponse($assessment->getScore());
             }
 
-            $scores[] = $assessment->getScore();
+            $cumulativeScore += ($assessment->getScore() * $plugin->getWeight());
+            $cumulativeWeight += $plugin->getWeight();
         }
 
-        if(count($scores) > 0)
-        {
-            $score = (int) (array_sum($scores) / count($scores));
-        }
-        else
-        {
-            $score = null;
-        }
+        $score = round($cumulativeScore / $cumulativeWeight);
 
         return static::createResponse($score);
     }
