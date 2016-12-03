@@ -11,7 +11,7 @@ class Ontic_NoFraud_Model_Sales_Order_Observer
 	{
 	    $order = $observer->getOrder();
 
-	    $cardnumber = $order->getPayment->getCcNumber();
+	    $cardnumber = $order->getPayment()->getCcNumber();
 
 	    $host = Mage::getStoreConfig('ontic/nofraud/host'); // core_config_data
 	    $username = Mage::getStoreConfig('ontic/nofraud/username');
