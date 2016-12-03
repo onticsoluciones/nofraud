@@ -37,4 +37,9 @@ interface IPlugin
      * @return float
      */
     function getWeight();
+
+    /**
+     * @return bool
+     */
+    function isAuthoritative();
 }

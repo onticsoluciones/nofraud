@@ -44,7 +44,7 @@ class AssessmentController extends BaseController
                 continue;
             }
 
-            if($assessment->isAuthoritative())
+            if($assessment->isAuthoritative() && $plugin->isAuthoritative())
             {
                 // The plugin has made an authorizative assessment,
                 // so just return its score

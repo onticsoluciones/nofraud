@@ -19,8 +19,12 @@ class PluginUtils
         foreach($configuration['plugins'] as $pluginConfig)
         {
             $code = $pluginConfig['code'];
-            $weight = $pluginConfig['weight'] ?: 1;
-            $authoritative = $pluginConfig['authoritative'] ?: false;
+            $weight = isset($pluginConfig['weight'])
+                ? $pluginConfig['weight']
+                : 1;
+            $authoritative = isset($pluginConfig['authoritative'])
+                ? $pluginConfig['authoritative']
+                : false;
             $configuration = $pluginConfig['config'];
 
             $pluginClass = 'Ontic\NoFraud\Plugins\\' . static::toPascalCase($code) . 'Plugin';
