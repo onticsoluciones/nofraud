@@ -39,13 +39,13 @@ NoFraud is a federated multi-node electronic transactions validator. Uses Machin
 
 #Credits
 
-Magento Community Edition -> https://magento.com/products/community-edition
-Docker -> https://www.docker.com/
-Ternsor Flow -> https://www.tensorflow.org/
-Symphony -> http://symfony.es/
-Dashing.io -> https://github.com/Shopify/dashing
-Python -> https://www.python.org/
-PHP -> https://php.net/images/logo.php
+- Magento Community Edition -> https://magento.com/products/community-edition
+- Docker -> https://www.docker.com/
+- Tensor Flow -> https://www.tensorflow.org/
+- Symphony -> http://symfony.es/
+- Dashing.io -> https://github.com/Shopify/dashing
+- Python -> https://www.python.org/
+- PHP -> https://php.net/images/logo.php
 
 #Contributors
 
