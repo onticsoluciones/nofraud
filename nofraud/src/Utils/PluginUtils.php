@@ -25,7 +25,9 @@ class PluginUtils
             $authoritative = isset($pluginConfig['authoritative'])
                 ? $pluginConfig['authoritative']
                 : false;
-            $configuration = $pluginConfig['config'];
+            $configuration = isset($pluginConfig['config'])
+                ? $pluginConfig['config']
+                : [];
 
             $pluginClass = 'Ontic\NoFraud\Plugins\\' . static::toPascalCase($code) . 'Plugin';
             $plugins[] = new $pluginClass($weight, $authoritative, $configuration);
