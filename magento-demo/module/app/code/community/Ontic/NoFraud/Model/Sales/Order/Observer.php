@@ -27,9 +27,9 @@ class Ontic_NoFraud_Model_Sales_Order_Observer
 
 	    $client->setAuth($username, $password, Zend_Http_Client::AUTH_BASIC);
 
-	    $client->setRawData($json, 'application/json')->request('POST');
+	    $client->setRawData($json, 'application/json');
 
-	    $result = $client->request()->getBody();
+	    $result = $client->request(Zend_Http_Client::POST)->getBody();
 
 	    Mage::log('Response: '.$result);
 
