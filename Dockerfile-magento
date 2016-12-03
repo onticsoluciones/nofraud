@@ -1,0 +1,13 @@
+FROM php:5.6-apache
+COPY magento-demo/htdocs/ /var/www/html/
+COPY magento-demo/module/ /var/www/html/
+COPY magento-demo/sql/ /tmp/
+RUN echo "UPDATE core_config_data SET value = 'http://127.0.0.1:8000/' WHERE path LIKE 'web/unsecure/base_url'; UPDATE core_config_data SET value = 'https://127.0.0.1:8000/' WHERE path LIKE 'web/secure/base_url';" >> /tmp/bitnami_magento.sql
+RUN chown -R www-data.www-data /var/www/html/*
+RUN cp /var/www/html/.htaccess.sample /var/www/html/.htaccess
+RUN rm /etc/apache2/mods-available/php5.load
+RUN DEBIAN_FRONTEND=noninteractive apt update && apt install -y mysql-client php5-mysql php5-curl libapache2-mod-php5
+RUN cd /etc/apache2/mods-enabled && ln -fs ../mods-available/rewrite.load rewrite.load
+RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
+RUN sed -i 's/\/home\/alfonso\/magento-1.9.2.2-1\/mysql\/tmp\/mysql.sock/db/' /var/www/html/app/etc/local.xml
+RUN /etc/init.d/apache2 restart
