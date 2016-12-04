@@ -3,6 +3,7 @@ version: '2'
 services:
    db:
      image: mysql:5.7
+     container_name: mysqlnofraud
      environment:
        MYSQL_ROOT_PASSWORD: magento
        MYSQL_DATABASE: bitnami_magento
@@ -17,6 +18,7 @@ services:
      build:
           context: .
           dockerfile: Dockerfile-magento
+     container_name: magentonofraud
      ports:
        - "8000:80"
      environment:
@@ -27,5 +29,6 @@ services:
     build:
           context: .
           dockerfile: Dockerfile-nofraud
+    container_name: nofraudnode
     ports:
         - "9000:9000"

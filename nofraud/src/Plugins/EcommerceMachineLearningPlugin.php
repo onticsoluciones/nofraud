@@ -37,7 +37,9 @@ class EcommerceMachineLearningPlugin extends BasePlugin
         return [
             'order_amount',
             'country',
-            'country_iso_code'
+            'country_iso_code',
+            'learn',
+            'condition'
         ];
     }
 
@@ -54,16 +56,31 @@ class EcommerceMachineLearningPlugin extends BasePlugin
                 : 0
         ]];
 
+        $subcommand = '--evaluate';
+        $learn = false;
+        if(isset($data['learn']) && isset($data['condition']) && $data['learn'] == 1)
+        {
+            $args['valid'] = ($data['condition'] == 1);
+            $subcommand = '--train';
+            $learn = true;
+        }
+
         $descriptors = [
             0 => ['pipe', 'r'],
             1 => ['pipe', 'w'],
         ];
-        $cmd = sprintf('%s --evaluate', $this->executable);
+        $cmd = sprintf('%s %s ', $this->executable, $subcommand);
         $process = proc_open($cmd, $descriptors, $pipes);
         fwrite($pipes[0], json_encode($args));
         fclose($pipes[0]);
         $score = (float) trim(stream_get_contents($pipes[1]));
         proc_close($process);
+
+        if($learn)
+        {
+            return null;
+        }
+
         return new Assessment($score, false);
     }
 

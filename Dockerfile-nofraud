@@ -1,11 +1,10 @@
 FROM php:7.0-apache
 COPY nofraud/ /var/www/html/
+COPY mlplugin /var/www/
+RUN mkdir /var/www/html/data
+COPY nofraud-sample-data/nofraudconfig/ /var/www/html/data
 RUN cd /etc/apache2/mods-enabled && ln -fs ../mods-available/rewrite.load rewrite.load
 RUN cd /var/www/html && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN cd /var/www/html && php composer-setup.php
-RUN apt update ; apt install -y git
-RUN apt install zip unzip
+RUN apt update ; apt install -y zip unzip git python python-pip
 RUN cd /var/www/html && php composer.phar install
-RUN cd /var/www/html
-RUN mkdir data
-RUN vendor/bin/phinx migrate
