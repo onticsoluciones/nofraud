@@ -31,4 +31,4 @@ services:
           dockerfile: Dockerfile-nofraud
     container_name: nofraudnode
     ports:
-        - "9000:9000"
+        - "9000:80"
