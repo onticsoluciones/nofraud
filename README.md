@@ -7,6 +7,7 @@ Electronic Transactions Validator.
 * [Description](https://github.com/onticsoluciones/nofraud#description)
 * [Technology](https://github.com/onticsoluciones/nofraud#technology-used)
 * [Features](https://github.com/onticsoluciones/nofraud#features)
+* [Configuration](https://github.com/onticsoluciones/nofraud#configuration)
 * [Usage](https://github.com/onticsoluciones/nofraud#usage)
 * [Automatic instalation](https://github.com/onticsoluciones/nofraud/blob/master/doc/docker.md)
 * [Manual Installation](https://github.com/onticsoluciones/nofraud/blob/master/doc/installation.md)
@@ -37,6 +38,14 @@ NoFraud is a federated multi-node electronic transactions validator. Uses Machin
 - [x] Configurable Plugin via Admin Panel
 - [x] Multinode Connections
 - [x] Monitoring Dashboard
+
+#Configuration
+
+In data/config.yml you declare plugins that NoFraud node will use, they will be processed from up to down priority
+
+In data/database.sqlite you can add users as [id, username, password (bcrypt)] (default: admin/admin)
+
+Refer to https://github.com/onticsoluciones/nofraud-sample-data for data and plugin samples
 
 #Usage
 
