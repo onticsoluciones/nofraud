@@ -120,22 +120,23 @@ class Ontic_NoFraud_Model_Sales_Order_Observer
 
 	    $ip = Mage::helper('core/http')->getRemoteAddr();
 
+	    //define states that are relevant for ML
 	    $stateCancel = $order::STATE_CANCELED;
 	    $stateComplete = $order::STATE_COMPLETE;
 
 	    if ($order->getState() == $stateCancel)
 	    {
-		$learn = 1;
+		$learn = 1;     //instruct as
 		$condition = 0; //bad
 	    }
 	    elseif ($order->getState() == $stateComplete)
 	    {
-		$learn = 1;
+		$learn = 1;     //instruct as
 		$condition = 1; //good
 	    }
 	    else
 	    {
-		$learn = 0;
+		$learn = 0;     //neutral
 		$condition = -1;
 	    }
 
