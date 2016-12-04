@@ -5,8 +5,10 @@ COPY nofraud-sample-data/magento-demo/sql/ /tmp/
 RUN chown -R www-data.www-data /var/www/html/*
 RUN cp /var/www/html/.htaccess.sample /var/www/html/.htaccess
 RUN rm /etc/apache2/mods-available/php5.load
-RUN DEBIAN_FRONTEND=noninteractive apt update && apt install -y mysql-client php5-mysql php5-curl libapache2-mod-php5
+RUN DEBIAN_FRONTEND=noninteractive apt update && apt install -y mysql-client php5-mysql php5-curl libapache2-mod-php5 php5-mcrypt
 RUN cd /etc/apache2/mods-enabled && ln -fs ../mods-available/rewrite.load rewrite.load
 RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 RUN sed -i 's/\/home\/alfonso\/magento-1.9.2.2-1\/mysql\/tmp\/mysql.sock/db/' /var/www/html/app/etc/local.xml
+COPY data-docker/rootCA.crt /usr/local/share/ca-certificates/
+RUN update-ca-certificates
 RUN /etc/init.d/apache2 restart
