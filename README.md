@@ -10,6 +10,7 @@ Electronic Transactions Validator.
 * [Automatic instalation](https://github.com/onticsoluciones/nofraud/blob/master/doc/docker.md)
 * [Manual Installation](https://github.com/onticsoluciones/nofraud/blob/master/doc/installation.md)
 * [Dashboard](https://github.com/onticsoluciones/nofraud/blob/master/doc/dashboard.md)
+* [Magento extension demo](https://github.com/onticsoluciones/nofraud/blob/master/doc/magento_manual.md)
 * [License](https://github.com/onticsoluciones/nofraud/blob/master/LICENSE)
 * [Credits](https://github.com/onticsoluciones/nofraud#credits)
 
