@@ -7,6 +7,7 @@ Electronic Transactions Validator.
 * [Description](https://github.com/onticsoluciones/nofraud#description)
 * [Technology](https://github.com/onticsoluciones/nofraud#technology-used)
 * [Features](https://github.com/onticsoluciones/nofraud#features)
+* [Usage](https://github.com/onticsoluciones/nofraud#usage)
 * [Automatic instalation](https://github.com/onticsoluciones/nofraud/blob/master/doc/docker.md)
 * [Manual Installation](https://github.com/onticsoluciones/nofraud/blob/master/doc/installation.md)
 * [Dashboard](https://github.com/onticsoluciones/nofraud/blob/master/doc/dashboard.md)
@@ -37,6 +38,15 @@ NoFraud is a federated multi-node electronic transactions validator. Uses Machin
 - [x] Multinode Connections
 - [x] Monitoring Dashboard
 
+#Usage
+
+Once running, NoFraud expose and API REST interface you can interact:
+
+- GET petition /capabilities => you get a JSON array with variables network can return an assessment about
+
+- POST petition /assessment => you send a JSON array (key => value) and get a % assessment (0-100) which 0 is the worst and 100 the best
+
+Additionally you can send transactions for learning puporses adding "learn" variable set to 1 and "condition" set to 1 for a god transaction and 0 for a bad one
 
 #Credits
 
