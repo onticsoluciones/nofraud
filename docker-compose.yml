@@ -32,3 +32,4 @@ services:
     container_name: nofraudnode
     ports:
         - "9000:80"
+        - "9443:443"
