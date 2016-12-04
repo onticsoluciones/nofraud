@@ -11,8 +11,8 @@ RUN cd /var/www/html && php composer.phar install
 RUN curl https://bootstrap.pypa.io/get-pip.py > /tmp/get-pip.py ; python /tmp/get-pip.py ; pip install tensorflow
 COPY data-docker/rootCA.crt /usr/local/share/ca-certificates/
 RUN update-ca-certificates
-COPY data-docker/magentonofraud.key /etc/apache2/
-COPY data-docker/magentonofraud.crt /etc/apache2/
+COPY data-docker/nofraudnode.key /etc/apache2/
+COPY data-docker/nofraudnode.crt /etc/apache2/
 COPY data-docker/nofraudnode-ssl.conf /etc/apache2/sites-enabled/
 RUN a2enmod ssl; a2enmod headers;  echo "SSLProtocol ALL -SSLv2 -SSLv3" >> /etc/apache2/apache2.conf
 RUN /etc/init.d/apache2 restart
