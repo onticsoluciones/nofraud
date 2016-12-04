@@ -81,7 +81,7 @@ class EcommerceMachineLearningPlugin extends BasePlugin
             return null;
         }
 
-        return new Assessment($score, false);
+        return new Assessment($score * 100, false);
     }
 
     /**
